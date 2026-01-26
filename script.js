@@ -1,18 +1,30 @@
-let audioUnlocked = false;
+const emoteFiles = [
+  "emote1.mp4",
+];
 
-// First click anywhere unlocks audio
-document.body.addEventListener("click", () => {
-  audioUnlocked = true;
-});
+const grid = document.getElementById("grid");
 
-document.querySelectorAll(".emote-card").forEach(card => {
-  const video = card.querySelector("video");
-  video.src = card.dataset.video;
+emoteFiles.forEach(file => {
+  const card = document.createElement("div");
+  card.className = "emote-card";
+
+  const video = document.createElement("video");
+  video.src = `assets/emotes/${file}`;
   video.loop = true;
   video.playsInline = true;
 
+  const name = document.createElement("p");
+  name.textContent = file
+    .replace(".mp4", "")
+    .replace(/[-_]/g, " ");
+
+  card.appendChild(video);
+  card.appendChild(name);
+  grid.appendChild(card);
+
+  // Hover preview
   card.addEventListener("mouseenter", () => {
-    video.muted = !audioUnlocked; // mute only if user hasn’t clicked
+    video.muted = true;
     video.currentTime = 0;
     video.play();
   });
@@ -22,6 +34,7 @@ document.querySelectorAll(".emote-card").forEach(card => {
     video.currentTime = 0;
   });
 
+  // Click = sound
   card.addEventListener("click", () => {
     video.muted = false;
     video.currentTime = 0;

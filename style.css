@@ -1,40 +1,55 @@
+:root {
+  --bg: #0f0f12;
+  --card: rgba(255,255,255,0.08);
+  --border: rgba(255,255,255,0.12);
+}
+
 body {
-  background-color: #0b0b10;
-  color: white;
-  font-family: Arial, sans-serif;
+  margin: 0;
   padding: 40px;
+  background: var(--bg);
+  color: white;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Text",
+    "SF Pro Display",
+    system-ui,
+    sans-serif;
 }
 
 h1 {
-  text-transform: lowercase;
-  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 24px;
 }
 
-.grid {
+#grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
 }
 
 .emote-card {
-  background: #151520;
-  border-radius: 14px;
-  padding: 10px;
-  cursor: pointer;
-  transition: transform 0.2s;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 12px;
+  backdrop-filter: blur(14px);
+  transition: transform 0.2s ease;
 }
 
 .emote-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .emote-card video {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 14px;
 }
 
 .emote-card p {
-  margin-top: 8px;
-  font-size: 14px;
+  margin: 8px 4px 0;
+  font-size: 13px;
   opacity: 0.85;
 }
