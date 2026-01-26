@@ -26,7 +26,7 @@ emoteFiles.forEach(file => {
 
   // Hover preview
   card.addEventListener("mouseenter", () => {
-    video.muted = true;
+    video.muted = false;
     video.currentTime = 0;
     video.play();
   });
