@@ -1,7 +1,7 @@
 alert("js loaded");
 
 const emoteFiles = [
-  "emote1.mp4",
+  "it's me jessy and ari.mp4",
 ];
 
 const grid = document.getElementById("grid");
