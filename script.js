@@ -1,3 +1,5 @@
+alert("js loaded");
+
 const emoteFiles = [
   "emote1.mp4",
 ];
