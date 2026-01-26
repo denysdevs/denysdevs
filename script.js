@@ -1,11 +1,18 @@
+let audioUnlocked = false;
+
+// First click anywhere unlocks audio
+document.body.addEventListener("click", () => {
+  audioUnlocked = true;
+});
+
 document.querySelectorAll(".emote-card").forEach(card => {
   const video = card.querySelector("video");
   video.src = card.dataset.video;
   video.loop = true;
   video.playsInline = true;
 
-  // Hover → just play (don’t mute)
   card.addEventListener("mouseenter", () => {
+    video.muted = !audioUnlocked; // mute only if user hasn’t clicked
     video.currentTime = 0;
     video.play();
   });
@@ -15,8 +22,8 @@ document.querySelectorAll(".emote-card").forEach(card => {
     video.currentTime = 0;
   });
 
-  // Click → restart video (audio plays naturally)
   card.addEventListener("click", () => {
+    video.muted = false;
     video.currentTime = 0;
     video.play();
   });
