@@ -1,5 +1,3 @@
-alert("js loaded");
-
 const emoteFiles = [
   "it's me jessy and ari.mp4",
 ];
@@ -26,7 +24,6 @@ emoteFiles.forEach(file => {
 
   // Hover preview
   card.addEventListener("mouseenter", () => {
-    video.muted = false;
     video.currentTime = 0;
     video.play();
   });
