@@ -1,0 +1,40 @@
+body {
+  background-color: #0b0b10;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
+
+h1 {
+  text-transform: lowercase;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.emote-card {
+  background: #151520;
+  border-radius: 14px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.emote-card:hover {
+  transform: scale(1.05);
+}
+
+.emote-card video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.emote-card p {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.85;
+}
