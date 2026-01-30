@@ -39,7 +39,7 @@ h1 {
 
 #grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
   gap: 18px;
 }
 
@@ -62,9 +62,6 @@ h1 {
   width: 100%;
   border-radius: 14px;
   background: black;
-
-  transform: scale(3);
-  transform-origin: center;
 }
 
 .emote-card p {
