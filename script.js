@@ -1,5 +1,5 @@
 const emoteFiles = [
-  "it's me jessy and ari.mp4",
+  "Phonky Turn.mp4",
 ];
 
 const grid = document.getElementById("grid");
