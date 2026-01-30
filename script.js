@@ -22,7 +22,6 @@ emoteFiles.forEach(file => {
   card.appendChild(name);
   grid.appendChild(card);
 
-  // Hover preview
   card.addEventListener("mouseenter", () => {
     video.currentTime = 0;
     video.play();
@@ -33,7 +32,6 @@ emoteFiles.forEach(file => {
     video.currentTime = 0;
   });
 
-  // Click = sound
   card.addEventListener("click", () => {
     video.muted = false;
     video.currentTime = 0;

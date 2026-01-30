@@ -1,5 +1,4 @@
 :root {
-  /* iOS Dark Mode palette */
   --bg: #000000;
   --card-bg: rgba(28, 28, 30, 0.85);
   --card-border: rgba(255, 255, 255, 0.08);
@@ -18,7 +17,6 @@ body {
   background: var(--bg);
   color: var(--text-primary);
 
-  /* Apple system font stack */
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -72,7 +70,6 @@ h1 {
   letter-spacing: -0.1px;
 }
 
-/* Optional subtle tap highlight (iOS feel) */
 .emote-card:active {
   transform: scale(0.98);
 }
