@@ -1,6 +1,6 @@
 const emoteFiles = [
-  "Phonky Turn.mp4",
   "Lush Life.mp4",
+  "Phonky Turn.mp4",
 ];
 
 const grid = document.getElementById("grid");
