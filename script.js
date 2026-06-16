@@ -2,10 +2,17 @@ const emotes = [
   "Better in Denim.mp4",
   "Lush Life.mp4",
   "Phonky Turn.mp4",
+  "Confess your Love.mp4",
+  "Dame un Grr.mp4",
+  "Rock like Pebble.mp4",
+  "Picos Celebration.mp4",
+  "I love you so.mp4",
+  "Jerry Cookout.mp4",
 ];
 
 const cutscenes = [
   "Cutscene1.mp4",
+  "Punch Cutscene.mp4",
 ];
 
 function createCards(files, containerId, isCutscene = false) {
