@@ -2,6 +2,7 @@ const emoteFiles = [
   "Better in Denim.mp4",
   "Lush Life.mp4",
   "Phonky Turn.mp4",
+  "Cutscene1.mp4",
 ];
 
 const grid = document.getElementById("grid");
